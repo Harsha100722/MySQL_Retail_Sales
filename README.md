@@ -63,9 +63,9 @@ FROM retail_sale
 GROUP BY category;
 
 # 4.Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category:
-SELECT ROUND(AVG(age), 2)
+** SELECT ROUND(AVG(age), 2)
 FROM retail_sale
-WHERE category = 'Beauty';
+WHERE category = 'Beauty'; **
 
 # 5.Write a SQL query to find all transactions where the total_sale is greater than 1000:
 SELECT * FROM retail_sale
