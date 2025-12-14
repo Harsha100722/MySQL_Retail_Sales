@@ -23,16 +23,18 @@ This project demonstrates core SQL skills used by data analysts to load data, cl
 ## Database Setup
 
 ### Create Working Table
+```sql
 CREATE TABLE retail_sale
 LIKE `sql - retail sales analysis_utf`;
 
 ### Insert Data into Working Table
 INSERT INTO retail_sale
 SELECT * FROM `sql - retail sales analysis_utf`;     ##Copies all records from the raw table into retail_sale
-
+```
 ## Data Cleaning
 
 ### Detect Duplicate Records 
+```sql
 WITH retail_cte AS
 (
 SELECT *,
@@ -43,7 +45,7 @@ age, category, quantiy, price_per_unit, cogs, total_sale
 FROM retail_sale
 )
 SELECT * FROM retail_cte where row_num>1;        ## Records with row_num > 1 indicate duplicates
-
+```
 ## Exploratory Data Analysis (EDA)
 ### Business Analysis Queries
 
